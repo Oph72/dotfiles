@@ -18,5 +18,6 @@ vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.opt.foldlevel = 3
 
 vim.opt.termguicolors = true
+vim.opt.background = "dark"
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"

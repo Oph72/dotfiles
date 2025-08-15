@@ -24,7 +24,7 @@ return {
                     'rust_analyzer',
                     'sqlls',
                     'terraformls',
-                    'tsserver',
+                    'ts_ls',
                     'vimls'
                 },
                 handlers = {
