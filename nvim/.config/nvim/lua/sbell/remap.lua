@@ -3,6 +3,10 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
 vim.keymap.set('n', 'Q', '<nop>')
 
+--- lsp remaps
+vim.keymap.set('i', '<C-Space>', '<C-x><C-o>')
+vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+
 local group = vim.api.nvim_create_augroup("Jenkinsfile", { clear = true })
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" },
   { pattern = "Jenkinsfile", command = "set filetype=groovy", group = group })

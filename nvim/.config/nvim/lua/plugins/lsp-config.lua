@@ -1,4 +1,15 @@
 return {
+    'mason-org/mason.nvim',
+    opts = {
+        ensure_installed = {
+            'kotlin_language_server',
+            'lua_ls',
+            'pylsp',
+            'rust_analyzer',
+        }
+    },
+}
+--[[return {
     {
         'williamboman/mason.nvim',
         config = function()
@@ -119,4 +130,4 @@ return {
             })
         end
     }
-}
+}--]]
