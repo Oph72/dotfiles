@@ -2,6 +2,7 @@ return {
     'mason-org/mason.nvim',
     opts = {
         ensure_installed = {
+            'elm-language-server',
             'kotlin_language_server',
             'lua_ls',
             'pylsp',

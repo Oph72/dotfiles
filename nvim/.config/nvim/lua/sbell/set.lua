@@ -23,3 +23,6 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 
 vim.opt.winborder = 'rounded'
+
+vim.o.title = true
+vim.opt.titlestring = [[%{fnamemodify(getcwd(), ':t')} - %{v:progname}]]

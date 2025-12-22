@@ -14,10 +14,3 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup("plugins")
 
 vim.opt.background = "dark"
-local stuff = {
-  {
-    'L3MON4D3/LuaSnip',
-    version = 'v2.*',
-    build = 'make install_jsregexp'
-  },
-}

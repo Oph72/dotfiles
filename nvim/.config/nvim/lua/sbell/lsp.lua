@@ -1,4 +1,5 @@
 vim.lsp.enable({
+  'elm-language-server',
   'groovyls',
   'kotlin_language_server',
   'lua_ls',
