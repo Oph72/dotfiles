@@ -178,7 +178,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export PATH="$HOME/.tfenv/bin:$PATH"
 
 export CHEWY_EMAIL="sbell8@chewy.com"
-export JFROG_IDENTITY_TOKEN="cmVmdGtuOjAxOjE4MDI5NzY1Mjg6dU54cnNyOERkcUxRdHUwZWk3S2JQd21qV0dG"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
