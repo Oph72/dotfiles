@@ -1,10 +1,11 @@
 vim.lsp.enable({
-  'elm-language-server',
+  'elmls',
   'groovyls',
   'kotlin_language_server',
   'lua_ls',
   'pylsp',
   'rust_analyzer',
+  'terraformls',
 })
 
 vim.diagnostic.config({

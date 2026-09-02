@@ -1,15 +1,22 @@
 return {
-    'mason-org/mason.nvim',
-    opts = {
-        ensure_installed = {
-            'elm-language-server',
-            'kotlin_language_server',
-            'lua_ls',
-            'pylsp',
-            'rust_analyzer',
-        }
+    {
+        'mason-org/mason.nvim',
+        opts = {
+            ensure_installed = {
+                'elm-language-server',
+                'kotlin_language_server',
+                'lua_ls',
+                'pylsp',
+                'rust_analyzer',
+                'terraformls',
+            }
+        },
+    },
+    {
+        'neovim/nvim-lspconfig',
     },
 }
+
 --[[return {
     {
         'williamboman/mason.nvim',

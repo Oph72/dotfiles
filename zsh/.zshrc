@@ -1,12 +1,13 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export ANDROID_HOME=$HOME/Android/Sdk
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/flutter/bin:/usr/local/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/build-tools/36.0.0:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -99,6 +100,15 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='nvim'
 export VISUAL='/home/steven/.local/share/bob/nvim-bin/nvim'
 
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+
+setopt AUTOCD
+setopt NOBEEP
+setopt NUMERIC_GLOB_SORT
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -164,6 +174,11 @@ export NVM_DIR="$HOME/.nvm"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export PATH="$HOME/.tfenv/bin:$PATH"
+
+export CHEWY_EMAIL="sbell8@chewy.com"
+export JFROG_IDENTITY_TOKEN="cmVmdGtuOjAxOjE4MDI5NzY1Mjg6dU54cnNyOERkcUxRdHUwZWk3S2JQd21qV0dG"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
