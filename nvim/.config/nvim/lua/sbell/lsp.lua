@@ -21,6 +21,12 @@ vim.diagnostic.config({
   update_in_insert = false,
 })
 
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(ev)
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = ev.buf })
+  end,
+})
+
 --[[vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)
     local client = vim.lsp.get_client_by_id(ev.data.client_id)
