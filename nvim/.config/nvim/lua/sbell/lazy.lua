@@ -16,7 +16,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
       { "\nPress any key to exit..." },
     }, true, {})
     vim.fn.getchar()
-    os.extit(1)
+    os.exit(1)
   end
 end
 vim.opt.rtp:prepend(lazypath)

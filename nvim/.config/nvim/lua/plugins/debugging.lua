@@ -1,8 +1,12 @@
 return {
     'mfussenegger/nvim-dap',
     dependencies = {
-        'rcarriga/nvim-dap-ui',
-        'nvim-neotest/nvim-nio'
+        {
+            'rcarriga/nvim-dap-ui',
+            dependencies = {
+                'nvim-neotest/nvim-nio',
+            },
+        },
     },
     config = function()
         local dap = require('dap')
@@ -15,15 +19,15 @@ return {
             dapui.open()
         end
         dap.listeners.before.event_terminated.dapui_config = function()
-            dapui.open()
+            dapui.close()
         end
         dap.listeners.before.event_exited.dapui_config = function()
-            dapui.open()
+            dapui.close()
         end
 
         dap.adapters.lldb = {
             type = "executable",
-            command = "/home/steven/.local/share/nvim/mason/bin/codelldb",
+            command = vim.fn.stdpath('data') .. '/mason/bin/codelldb',
             name = "lldb",
         }
 
@@ -58,7 +62,7 @@ return {
                     local root = vim.fs.find("src", { path = vim.uv.cwd(), upward = true, stop = vim.env.HOME })[1] or ""
                     local fname = vim.api.nvim_buf_get_name(0)
                     -- src/main/kotlin/websearch/Main.kt -> websearch.MainKt
-                    return fname:gsub(root, ""):gsub("main/kotlin/", ""):gsub(".kt", "Kt"):gsub("/", "."):sub(2, -1)
+                    return fname:gsub(root, ""):gsub("main/kotlin/", ""):gsub("%.kt$", "Kt"):gsub("/", "."):sub(2, -1)
                 end,
                 projectRoot = "${workspaceFolder}",
                 jsonLogFile = "",

@@ -1,15 +1,23 @@
 return {
     {
         'mason-org/mason.nvim',
+        opts = {},
+    },
+    {
+        'WhoIsSethDaniel/mason-tool-installer.nvim',
+        dependencies = { 'mason-org/mason.nvim' },
         opts = {
             ensure_installed = {
+                'codelldb',
                 'elm-language-server',
-                'kotlin_language_server',
-                'lua_ls',
-                'pylsp',
-                'rust_analyzer',
-                'terraformls',
-            }
+                'groovy-language-server',
+                'kotlin-debug-adapter',
+                'kotlin-language-server',
+                'lua-language-server',
+                'python-lsp-server',
+                'rust-analyzer',
+                'terraform-ls',
+            },
         },
     },
     {
