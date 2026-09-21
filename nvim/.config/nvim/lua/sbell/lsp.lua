@@ -1,11 +1,20 @@
 vim.lsp.enable({
+  'bashls',
+  'cssls',
+  'dockerls',
   'elmls',
+  'eslint',
   'groovyls',
+  'html',
+  'jsonls',
   'kotlin_language_server',
   'lua_ls',
   'pylsp',
   'rust_analyzer',
+  'tailwindcss',
   'terraformls',
+  'ts_ls',
+  'yamlls',
 })
 
 vim.diagnostic.config({

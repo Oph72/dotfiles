@@ -13,7 +13,24 @@ return {
             install_dir = vim.fn.stdpath('data') .. '/site',
         })
 
-        require('nvim-treesitter').install({ 'java', 'kotlin', 'rust' })
+        require('nvim-treesitter').install({
+            'bash',
+            'css',
+            'dockerfile',
+            'html',
+            'javascript',
+            'json',
+            'lua',
+            'markdown',
+            'markdown_inline',
+            'sql',
+            'tsx',
+            'typescript',
+            'yaml',
+            'java',
+            'kotlin',
+            'rust',
+        })
 
         local group = vim.api.nvim_create_augroup('treesitter_features', { clear = true })
         vim.api.nvim_create_autocmd('FileType', {
